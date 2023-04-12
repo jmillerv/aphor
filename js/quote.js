@@ -1,4 +1,4 @@
-// quote.js
+// imports
 const quoteText = document.getElementById("quote-text");
 const quoteAuthor = document.getElementById("quote-author");
 const quoteCitation = document.getElementById("quote-citation");
@@ -15,7 +15,7 @@ export async function fetchQuotes() {
     return data.quotes;
 }
 
-function getRandomQuote(quotes) {
+export function getRandomQuote(quotes) {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
 }
@@ -53,5 +53,7 @@ async function populateQuote() {
 // Load the initial quote
 populateQuote();
 
-// Listen for click events on the "New Quote" button
-document.querySelector('.btn').addEventListener('click', populateQuote);
+// Listen for click events on the "New Quote" button after DOM has loaded
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.btn').addEventListener('click', populateQuote);
+})

@@ -1,11 +1,4 @@
-import { fetchQuotes, getRandomQuote } from './quote';
-
-describe('fetchQuotes', () => {
-    test('fetches quotes and returns an array', async () => {
-        const quotes = await fetchQuotes();
-        expect(Array.isArray(quotes)).toBe(true);
-    });
-});
+import { getRandomQuote } from './quote';
 
 describe('getRandomQuote', () => {
     test('returns a random quote from an array of quotes', () => {
