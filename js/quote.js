@@ -1,4 +1,7 @@
 // quote.js
+const quoteText = document.getElementById("quote-text");
+const quoteAuthor = document.getElementById("quote-author");
+const quoteCitation = document.getElementById("quote-citation");
 
 function populateQuote() {
     fetch('data/quotes.json')
@@ -20,11 +23,30 @@ function populateQuote() {
             // initialize variables
             const quote = data.quotes[randomIndex].quote;
             const author = data.quotes[randomIndex].author;
+            const citation = data.quotes[randomIndex].citation;
 
             // modify elements within container
-            const quoteContainer = document.querySelector('.centered-quote');
-            quoteContainer.querySelector('h3').textContent = quote;
-            quoteContainer.querySelector('p').textContent = author;
+            quoteText.textContent = quote;
+            quoteAuthor.textContent = author;
+            quoteCitation.textContent = citation;
+
+            // Scale the text based on the amount of text relative to the page
+            const scaleText = () => {
+                const containerWidth = document.querySelector(".quote-container").clientWidth;
+                const textWidth = quoteText.clientWidth;
+                const scaleFactor = containerWidth / textWidth;
+
+                if (scaleFactor < 1) {
+                    quoteText.style.transform = `scale(${scaleFactor})`;
+                } else {
+                    quoteText.style.transform = "scale(1)";
+                }
+            };
+
+            // Delay scaling until DOM loads
+            requestAnimationFrame(scaleText);
+
+            window.addEventListener("resize", scaleText);
         })
         .catch(error => {
             console.error(`Error loading quotes from ${'data/quotes.json'}: ${error.message}`);
