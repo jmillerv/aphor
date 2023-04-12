@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <title>Quotes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <style>
-        /* Custom styles */
-        .centered-quote {
-            text-align: center;
-            font-size: 24px;
-            font-style: italic;
-            margin-top: 100px;
-            margin-bottom: auto;
-            align-items: center; /* Align vertical */
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-100">
-<div class="container">
-    <div class="twelve columns centered-quote">
-            <h3></h3>
-            <p></p>
-        <button class="btn btn-primary">New Quote</button>
+<div class="quote-container">
+    <div class="six columns centered-quote">
+            <p id="quote-text"></p>
+            <p>
+                <span class="em-dash">&mdash;</span>
+                <span id="quote-author" class="author"></span>
+                <span id="quote-citation" class="citation"></span>
+            </p>
+        <button class="btn btn-primary"  id="new-quote">New Quote</button>
     </div>
 </div>
 </body>

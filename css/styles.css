@@ -1,0 +1,54 @@
+/* Custom styles */
+body {
+    background-color: #f7f2e8;  /* light beige */
+    background-image: url("assets/groovepaper.png");
+    font-family: "Georgia", serif;
+}
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin-top: 25px;
+
+}
+.centered-quote {
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 100px;
+    margin-bottom: auto;
+    align-items: center; /* Align vertical */
+    background-color: rgba(255, 255, 255, 0.7); /* opacity at 70 percent to create a layered visual effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    color: #333333; /* Dark gray */
+}
+.author {
+    font-weight: bold;
+    margin-right: 0.1em;
+    display: inline-block;
+    color: #333333; /* Dark gray */
+}
+
+.citation {
+    font-style: italic;
+    font-size: 0.9em;
+    display: inline-block;
+    color: #333333; /* Dark gray */
+}
+
+.citation a {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.em-dash {
+    margin-right: 0.1em;
+    display: inline-block
+}
