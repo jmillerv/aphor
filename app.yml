@@ -1,0 +1,26 @@
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+domains:
+  - domain: quotes.jeremiah-miller.com
+    type: PRIMARY
+    zone: jeremiah-miller.com
+ingress:
+  rules:
+    - component:
+        name: aphor
+      match:
+        path:
+          prefix: /
+name: quotes-app
+region: nyc
+static_sites:
+  - environment_slug: html
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: jmillerv/aphor
+    name: aphor
+    static_dirs:
+      - assets
+      - css
