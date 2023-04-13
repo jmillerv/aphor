@@ -1,4 +1,3 @@
-// imports
 const quoteText = document.getElementById("quote-text");
 const quoteAuthor = document.getElementById("quote-author");
 const quoteCitation = document.getElementById("quote-citation");
