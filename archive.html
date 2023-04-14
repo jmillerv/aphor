@@ -8,17 +8,10 @@
     <div class="main-container container">
         <!-- Navigation Bar -->
         <div id="navbar"></div>
-
-        <!--quote box-->
-        <div class="quote-container">
-            <div class="centered-quote">
-                <p id="quote-text"></p>
-                <p>
-                    <span class="em-dash">&mdash;</span>
-                    <span id="quote-author" class="author"></span>
-                    <span id="quote-citation" class="citation"></span>
-                </p>
-                <button class="btn btn-primary"  id="new-quote">New Quote</button>
+        <div class="author-list">
+            <h2>Authors</h2>
+            <div class="authors">
+                <!-- Authors and quotes populated via script -->
             </div>
         </div>
     </div>
@@ -28,12 +21,12 @@
 </body>
 <script type="module" src="js/header.js"></script>
 <script type="module" src="js/nav.js"></script>
-<script type="module" src="js/quote.js"></script>
+<script type="module" src="js/archive.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         loadHeader(); // load header
         loadNav(); // load navigation
-        populateQuote(); // populate the quote box
+        loadAuthorsAndQuotes(); // load authors
     });
 </script>
 </html>
