@@ -14,7 +14,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.x
-
+# Create the package in the pipeline because if a package-lock.json is included, it interferes with the
+# DigitalOcean deploy and makes it more complex.
       - name: Create package.json
         run: |
           echo '{
