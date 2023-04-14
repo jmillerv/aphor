@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body class="bg-gray-100">
+<div class="container">
+    <div class="main-container container">
+        <!-- Navigation Bar -->
+        <div id="navbar"></div>
+        <div class="quote-container">
+            <div class="archive-box">
+                <div class="author-list">
+                    <div class="authors">
+                        <!-- Authors and quotes populated via script -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/nav.js"></script>
+<script type="module" src="js/archive.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadHeader(); // load header
+        loadNav(); // load navigation
+        loadAuthorsAndQuotes(); // load authors
+    });
+</script>
+</html>
