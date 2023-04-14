@@ -1,32 +1,29 @@
-/* Custom styles */
 body {
     background-color: #f7f2e8;  /* light beige */
     background-image: url("assets/groovepaper.png");
     font-family: "Georgia", serif;
 }
+
 .quote-container {
+    min-height: calc(100vh - 60px);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    margin-top: 25px;
-
+    padding: 1rem;
 }
 .centered-quote {
     text-align: center;
     font-size: 24px;
     font-weight: normal;
     font-style: italic;
-    margin-top: 100px;
-    margin-bottom: auto;
+    max-width: 600px;
     align-items: center; /* Align vertical */
     background-color: rgba(255, 255, 255, 0.7); /* opacity at 70 percent to create a layered visual effect */
-    padding: 20px;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     color: #333333; /* Dark gray */
+    position: relative;
 }
 .author {
     font-weight: bold;
@@ -51,4 +48,10 @@ body {
 .em-dash {
     margin-right: 0.1em;
     display: inline-block
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }

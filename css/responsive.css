@@ -1,0 +1,23 @@
+/* Mobile Navigation Bar */
+@media screen and (max-width: 767px) {
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .nav-links {
+        padding: 0.25rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-container {
+        font-size: 0.9rem;
+    }
+    .nav-links a {
+        font-size: 1rem;
+    }
+}

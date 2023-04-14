@@ -1,0 +1,52 @@
+/* Navigation Bar */
+.nav {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+.nav a {
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add this line */
+    transition: all 0.3s ease; /* Add this line */
+}
+
+.nav a:hover {
+    background-color: #efefef;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Add this line */
+}
+
+.nav a:active {
+    background-color: #e6e6e6;
+    box-shadow: none; /* Add this line */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: #cccccc;
+}
