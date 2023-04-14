@@ -37,7 +37,7 @@ function scaleText() {
     }
 }
 
-async function populateQuote() {
+export async function populateQuote() {
     try {
         const quotes = await fetchQuotes();
         const randomQuote = getRandomQuote(quotes);
