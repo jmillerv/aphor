@@ -44,7 +44,7 @@ export async function loadAuthorsAndQuotes() {
 
         authorQuotes.forEach((quote) => {
             const listItem = document.createElement('li');
-            const quoteText = document.createTextNode(`${quote.quote} - ${quote.citation}`);
+            const quoteText = document.createTextNode(`${quote.quote}. ${quote.citation}`);
 
             listItem.appendChild(quoteText);
             quoteList.appendChild(listItem);
