@@ -22,7 +22,24 @@ export function getRandomQuote(quotes) {
 function displayQuote(quoteObj) {
     quoteText.textContent = quoteObj.quote;
     quoteAuthor.textContent = quoteObj.author;
-    quoteCitation.textContent = quoteObj.citation;
+
+    // Remove any existing citation child nodes
+    while (quoteCitation.firstChild) {
+        quoteCitation.removeChild(quoteCitation.firstChild);
+    }
+
+    if (quoteObj.link && quoteObj.link.trim() !== "") {
+        // Create an anchor element and set its href attribute to the quoteObj.link property
+        const citationLink = document.createElement('a');
+        citationLink.href = quoteObj.link;
+        citationLink.textContent = quoteObj.citation;
+
+        // Append the new citation link to the quoteCitation element
+        quoteCitation.appendChild(citationLink);
+    } else {
+        // Display plain text citation without hyperlink
+        quoteCitation.textContent = quoteObj.citation;
+    }
 }
 
 function scaleText() {
