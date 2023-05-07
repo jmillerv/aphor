@@ -3,7 +3,8 @@ const quoteAuthor = document.getElementById("quote-author");
 const quoteCitation = document.getElementById("quote-citation");
 
 export async function fetchQuotes() {
-    const response = await fetch('data/quotes.json');
+    const directLink = window.QUOTE_STORAGE;
+    const response = await fetch(directLink);
     if (!response.ok) {
         throw new Error(`Server returned ${response.status} ${response.statusText}`);
     }

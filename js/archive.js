@@ -1,6 +1,7 @@
 // Function to load authors and quotes from the JSON file
 export async function loadAuthorsAndQuotes() {
-    const response = await fetch('data/quotes.json');
+    const directLink = window.QUOTE_STORAGE;
+    const response = await fetch(directLink);
     if (!response.ok) {
         throw new Error(`Server returned ${response.status} ${response.statusText}`);
     }
