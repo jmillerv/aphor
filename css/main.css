@@ -92,3 +92,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote-tags-container {
+    flex-shrink: 0;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.quote-container {
+    flex-grow: 1;
+}

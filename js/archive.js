@@ -58,12 +58,22 @@ function processTags(quotes) {
 function displayTags(tagsCount) {
     const quoteTags = document.querySelector('.quote-tags');
 
-    for (const tag in tagsCount) {
+    // Convert tagsCount object to an array
+    const tagsArray = Object.entries(tagsCount);
+
+    // Sort tags array alphabetically by tag name
+    tagsArray.sort((a, b) => a[0].localeCompare(b[0]));
+
+    // Sort tags array by highest count
+    tagsArray.sort((a, b) => b[1] - a[1]);
+
+    // Iterate over the sorted tags array and display the tags
+    tagsArray.forEach(([tag, count]) => {
         const tagItem = document.createElement('li');
-        tagItem.textContent = `${tag} (${tagsCount[tag]})`;
+        tagItem.textContent = `${tag} (${count})`;
         tagItem.dataset.tag = tag;
         quoteTags.appendChild(tagItem);
-    }
+    });
 }
 
 // createAuthorSection generates the div for each author in the archive

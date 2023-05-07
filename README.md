@@ -12,7 +12,8 @@ The schema of the json is as follows
       "author": "Cory Doctorow",
       "quote": "A private realm is necessary for human progress.",
       "citation": "How to Destroy Surveillance Capitalism",
-      "link": "https://bookshop.org/p/books/how-to-destroy-surveillance-capitalism-cory-doctorow/16078317?ean=9781736205907"
+      "link": "https://bookshop.org/p/books/how-to-destroy-surveillance-capitalism-cory-doctorow/16078317?ean=9781736205907",
+      "tags": ['surviellance', 'privacy', 'capitalism'']
 }
 ```
 
