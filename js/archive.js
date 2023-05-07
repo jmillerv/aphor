@@ -1,5 +1,5 @@
 // Function to load authors and quotes from the JSON file
-export async function loadAuthorsAndQuotes() {
+async function loadAuthorsAndQuotes() {
     const directLink = window.QUOTE_STORAGE;
     const response = await fetch(directLink);
     if (!response.ok) {
@@ -11,13 +11,14 @@ export async function loadAuthorsAndQuotes() {
     }
     const quotes = data.quotes;
 
-    // Create a set to store unique author names
-    const authorSet = new Set();
+    // Process tags
+    const tagsCount = processTags(quotes);
 
-    // Populate the authorSet with unique authors from the quotes data
-    quotes.forEach((quote) => {
-        authorSet.add(quote.author);
-    });
+    // Display tags
+    displayTags(tagsCount);
+
+    // Create a set to store unique author names
+    const authorSet = new Set(quotes.map((quote) => quote.author));
 
     // Sort authors alphabetically
     const sortedAuthors = Array.from(authorSet).sort();
@@ -27,33 +28,82 @@ export async function loadAuthorsAndQuotes() {
 
     // Create and append author sections
     sortedAuthors.forEach((author) => {
-        const authorSection = document.createElement('div');
-        const authorName = document.createElement('h3');
-        const quoteList = document.createElement('ul');
-
-        authorName.textContent = author;
-        authorSection.appendChild(authorName);
-        authorSection.appendChild(quoteList);
-
-        // Add event listener to toggle quote list visibility
-        authorName.addEventListener('click', () => {
-            quoteList.classList.toggle('hidden');
-        });
-
-        // Add quotes for the current author
-        const authorQuotes = quotes.filter((quote) => quote.author === author);
-
-        authorQuotes.forEach((quote) => {
-            const listItem = document.createElement('li');
-            const quoteText = document.createTextNode(`${quote.quote}. ${quote.citation}`);
-
-            listItem.appendChild(quoteText);
-            quoteList.appendChild(listItem);
-        });
-
-        // Add the author section to the authors container
+        const authorSection = createAuthorSection(author, quotes);
         authorsContainer.appendChild(authorSection);
     });
+
+
 }
+// processTags runs through each tag to generate a count
+function processTags(quotes) {
+    const tagsCount = {};
+
+    quotes.forEach((quote) => {
+        if (quote.tags && Array.isArray(quote.tags)) {
+            quote.tags.forEach((tag) => {
+                if (tagsCount[tag]) {
+                    tagsCount[tag]++;
+                } else {
+                    tagsCount[tag] = 1;
+                }
+            });
+        }
+    });
+
+    return tagsCount;
+}
+
+
+// displayTags add the tags to the tag container
+function displayTags(tagsCount) {
+    const quoteTags = document.querySelector('.quote-tags');
+
+    // Convert tagsCount object to an array
+    const tagsArray = Object.entries(tagsCount);
+
+    // Sort tags array alphabetically by tag name
+    tagsArray.sort((a, b) => a[0].localeCompare(b[0]));
+
+    // Sort tags array by highest count
+    tagsArray.sort((a, b) => b[1] - a[1]);
+
+    // Iterate over the sorted tags array and display the tags
+    tagsArray.forEach(([tag, count]) => {
+        const tagItem = document.createElement('li');
+        tagItem.textContent = `${tag} (${count})`;
+        tagItem.dataset.tag = tag;
+        quoteTags.appendChild(tagItem);
+    });
+}
+
+// createAuthorSection generates the div for each author in the archive
+function createAuthorSection(author, quotes) {
+    const authorSection = document.createElement('div');
+    const authorName = document.createElement('h3');
+    const quoteList = document.createElement('ul');
+
+    authorName.textContent = author;
+    authorSection.appendChild(authorName);
+    authorSection.appendChild(quoteList);
+
+    // Add event listener to toggle quote list visibility
+    authorName.addEventListener('click', () => {
+        quoteList.classList.toggle('hidden');
+    });
+
+    // Add quotes for the current author
+    const authorQuotes = quotes.filter((quote) => quote.author === author);
+
+    authorQuotes.forEach((quote) => {
+        const listItem = document.createElement('li');
+        const quoteText = document.createTextNode(`${quote.quote}. ${quote.citation}`);
+
+        listItem.appendChild(quoteText);
+        quoteList.appendChild(listItem);
+    });
+
+    return authorSection;
+}
+
 
 loadAuthorsAndQuotes();
