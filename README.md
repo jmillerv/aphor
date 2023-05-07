@@ -29,6 +29,9 @@ fly.io [provides similar services](https://fly.io/docs/languages-and-frameworks/
 
 [Github pages](https://docs.github.com/en/pages/quickstart) 
 
+## Environment Variables
+I sought to avoid dealing with node, so the location of where the quotes are stored is in `env.js` under `window.QUOTE_STORAGE`
+
 ## Credits 
 
 `groovepaper.png` Background made by https://graphicriver.net/user/krispdesigns
