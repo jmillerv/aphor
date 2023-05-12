@@ -329,6 +329,16 @@
         "ring",
         "amazon"
       ]
+    },
+    {
+      "author": "Peter Watts",
+      "quote": "These bots are mirrors. They can only reflect the world around them. Ensure that what you have to say hasn’t already been said a million times, and you should be okay.",
+      "citation": "The Only Question You Need to Ask ChatGPT.",
+      "link": "https://www.rifters.com/crawl/?p=10527",
+      "tags": [
+        "large language models",
+        "AI"
+      ]
     }
   ]
 }
