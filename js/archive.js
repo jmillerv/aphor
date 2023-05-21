@@ -15,7 +15,7 @@ async function loadAuthorsAndQuotes() {
     const tagsCount = processTags(quotes);
 
     // Display tags
-    displayTags(tagsCount);
+    displayTags(tagsCount, quotes);
 
     // Create a set to store unique author names
     const authorSet = new Set(quotes.map((quote) => quote.author));
@@ -55,7 +55,7 @@ function processTags(quotes) {
 
 
 // displayTags add the tags to the tag container
-function displayTags(tagsCount) {
+function displayTags(tagsCount, quotes) {
     const quoteTags = document.querySelector('.quote-tags');
 
     // Convert tagsCount object to an array
@@ -72,7 +72,26 @@ function displayTags(tagsCount) {
         const tagItem = document.createElement('li');
         tagItem.textContent = `${tag} (${count})`;
         tagItem.dataset.tag = tag;
+        // Add event listener to tagItem
+        tagItem.addEventListener('click', () => {
+            displayQuotesByTag(quotes, tag);
+        });
         quoteTags.appendChild(tagItem);
+    });
+}
+
+function displayQuotesByTag(quotes, tag) {
+    const filteredQuotes = quotes.filter(quote => quote.tags && quote.tags.includes(tag));
+    const quoteContainer = document.querySelector('.quote-container');
+    // Clear the existing quotes
+    quoteContainer.innerHTML = '';
+
+    // Display the filtered quotes
+    filteredQuotes.forEach(quote => {
+        // Code to create and append a new element for each quote
+        const quoteElement = document.createElement('div');
+        quoteElement.textContent = `${quote.author}: ${quote.quote}`;
+        quoteContainer.appendChild(quoteElement);
     });
 }
 
