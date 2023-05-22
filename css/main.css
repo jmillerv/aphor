@@ -107,3 +107,8 @@ body {
 .quote-container {
     flex-grow: 1;
 }
+
+.quote-tags li {
+    cursor: pointer;
+    text-decoration: underline;
+}

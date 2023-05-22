@@ -15,7 +15,7 @@ async function loadAuthorsAndQuotes() {
     const tagsCount = processTags(quotes);
 
     // Display tags
-    displayTags(tagsCount);
+    displayTags(tagsCount, quotes);
 
     // Create a set to store unique author names
     const authorSet = new Set(quotes.map((quote) => quote.author));
@@ -55,7 +55,7 @@ function processTags(quotes) {
 
 
 // displayTags add the tags to the tag container
-function displayTags(tagsCount) {
+function displayTags(tagsCount, quotes) {
     const quoteTags = document.querySelector('.quote-tags');
 
     // Convert tagsCount object to an array
@@ -72,9 +72,42 @@ function displayTags(tagsCount) {
         const tagItem = document.createElement('li');
         tagItem.textContent = `${tag} (${count})`;
         tagItem.dataset.tag = tag;
+        // Add event listener to tagItem
+        tagItem.addEventListener('click', () => {
+            displayQuotesByTag(quotes, tag);
+        });
         quoteTags.appendChild(tagItem);
     });
 }
+
+function displayQuotesByTag(quotes, tag) {
+    // Clear the existing quotes
+    const authorsContainer = document.querySelector('.authors');
+    while (authorsContainer.firstChild) {
+        authorsContainer.firstChild.remove();
+    }
+
+    // get quotes for selected tag
+    const filteredQuotes = quotes.filter(quote => quote.tags && quote.tags.includes(tag));
+
+    // Create a set to store unique author names from the filtered quotes
+    const authorSet = new Set();
+    filteredQuotes.forEach((quote) => {
+        authorSet.add(quote.author);
+    });
+
+    // Sort authors alphabetically
+    const sortedAuthors = Array.from(authorSet).sort();
+
+    // Create and append author sections
+    sortedAuthors.forEach((author) => {
+        const authorSection = createAuthorSection(author, quotes);
+        authorsContainer.appendChild(authorSection);
+    });
+}
+
+
+
 
 // createAuthorSection generates the div for each author in the archive
 function createAuthorSection(author, quotes) {
@@ -96,7 +129,7 @@ function createAuthorSection(author, quotes) {
 
     authorQuotes.forEach((quote) => {
         const listItem = document.createElement('li');
-        const quoteText = document.createTextNode(`${quote.quote}. ${quote.citation}`);
+        const quoteText = document.createTextNode(`${quote.quote} ${quote.citation}`);
 
         listItem.appendChild(quoteText);
         quoteList.appendChild(listItem);
