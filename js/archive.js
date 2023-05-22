@@ -81,19 +81,33 @@ function displayTags(tagsCount, quotes) {
 }
 
 function displayQuotesByTag(quotes, tag) {
-    const filteredQuotes = quotes.filter(quote => quote.tags && quote.tags.includes(tag));
-    const quoteContainer = document.querySelector('.quote-container');
     // Clear the existing quotes
-    quoteContainer.innerHTML = '';
+    const authorsContainer = document.querySelector('.authors');
+    while (authorsContainer.firstChild) {
+        authorsContainer.firstChild.remove();
+    }
 
-    // Display the filtered quotes
-    filteredQuotes.forEach(quote => {
-        // Code to create and append a new element for each quote
-        const quoteElement = document.createElement('div');
-        quoteElement.textContent = `${quote.author}: ${quote.quote}`;
-        quoteContainer.appendChild(quoteElement);
+    // get quotes for selected tag
+    const filteredQuotes = quotes.filter(quote => quote.tags && quote.tags.includes(tag));
+
+    // Create a set to store unique author names from the filtered quotes
+    const authorSet = new Set();
+    filteredQuotes.forEach((quote) => {
+        authorSet.add(quote.author);
+    });
+
+    // Sort authors alphabetically
+    const sortedAuthors = Array.from(authorSet).sort();
+
+    // Create and append author sections
+    sortedAuthors.forEach((author) => {
+        const authorSection = createAuthorSection(author, quotes);
+        authorsContainer.appendChild(authorSection);
     });
 }
+
+
+
 
 // createAuthorSection generates the div for each author in the archive
 function createAuthorSection(author, quotes) {
@@ -115,7 +129,7 @@ function createAuthorSection(author, quotes) {
 
     authorQuotes.forEach((quote) => {
         const listItem = document.createElement('li');
-        const quoteText = document.createTextNode(`${quote.quote}. ${quote.citation}`);
+        const quoteText = document.createTextNode(`${quote.quote} ${quote.citation}`);
 
         listItem.appendChild(quoteText);
         quoteList.appendChild(listItem);
