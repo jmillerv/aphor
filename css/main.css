@@ -60,8 +60,9 @@ body {
     display: none;
 }
 
-.author-list h3 {
+.author-list h5 {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .author-list ul {

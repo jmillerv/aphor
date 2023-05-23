@@ -112,12 +112,15 @@ function displayQuotesByTag(quotes, tag) {
 // createAuthorSection generates the div for each author in the archive
 function createAuthorSection(author, quotes) {
     const authorSection = document.createElement('div');
-    const authorName = document.createElement('h3');
+    const authorName = document.createElement('h5');
     const quoteList = document.createElement('ul');
 
     authorName.textContent = author;
     authorSection.appendChild(authorName);
     authorSection.appendChild(quoteList);
+
+    // Start with the quote list hidden
+    quoteList.classList.add('hidden');
 
     // Add event listener to toggle quote list visibility
     authorName.addEventListener('click', () => {
