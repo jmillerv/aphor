@@ -44,11 +44,22 @@ async function loadAuthorsAndQuotes() {
             const authorsContainer = document.querySelector('.authors');
             if (searchTerm) {
                 const results = performSearch(searchTerm);
-                authorsContainer.innerHTML = '';
+                // Group quotes by author
+                const resultsByAuthor = {};
                 results.forEach((result) => {
-                    const authorSection = createAuthorSection(result.item.author, [result.item]);
-                    authorsContainer.appendChild(authorSection);
+                    const author = result.item.author;
+                    if (!resultsByAuthor[author]) {
+                        resultsByAuthor[author] = [];
+                    }
+                    resultsByAuthor[author].push(result.item);
                 });
+
+                authorsContainer.innerHTML = ''; // clear authors container
+                // Create an author section for each author and append all their quotes
+                for (const author in resultsByAuthor) {
+                    const authorSection = createAuthorSection(author, resultsByAuthor[author]);
+                    authorsContainer.appendChild(authorSection);
+                }
             } else {
                 // Clear the search results and display all authors and quotes
                 authorsContainer.innerHTML = '';
