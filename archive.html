@@ -8,6 +8,10 @@
     <div class="main-container container">
         <!-- Navigation Bar -->
         <div id="navbar"></div>
+        <!--  Search -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search quotes...">
+        </div>
         <!-- quotes -->
         <div class="content-wrapper">
             <div class="quote-container">
@@ -36,6 +40,8 @@
 <script type="module" src="js/nav.js"></script>
 <script type="module" src="js/env.js"></script>
 <script type="module" src="js/archive.js"></script>
+<script type="module" src="js/fuse.js"></script>
+<script type="module" src="js/search.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         loadHeader(); // load header

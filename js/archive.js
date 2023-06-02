@@ -1,3 +1,5 @@
+import {initializeSearchIndex, performSearch} from './search.js';
+
 // Function to load authors and quotes from the JSON file
 async function loadAuthorsAndQuotes() {
     const directLink = window.QUOTE_STORAGE;
@@ -9,7 +11,10 @@ async function loadAuthorsAndQuotes() {
     if (!Array.isArray(data.quotes)) {
         throw new Error('Invalid data structure: missing quotes array');
     }
-    const quotes = data.quotes;
+    let quotes = data.quotes;
+
+    // initialize the search
+    initializeSearchIndex(quotes);
 
     // Process tags
     const tagsCount = processTags(quotes);
@@ -31,9 +36,30 @@ async function loadAuthorsAndQuotes() {
         const authorSection = createAuthorSection(author, quotes);
         authorsContainer.appendChild(authorSection);
     });
-
-
+    // wrap in a DOMContentLoaded to avoid TypeError: Cannot Read properties of null
+        // Add search event listener
+        const searchBox = document.querySelector('#search');
+        searchBox.addEventListener('input', function (event) {
+            const searchTerm = event.target.value;
+            const authorsContainer = document.querySelector('.authors');
+            if (searchTerm) {
+                const results = performSearch(searchTerm);
+                authorsContainer.innerHTML = '';
+                results.forEach((result) => {
+                    const authorSection = createAuthorSection(result.item.author, [result.item]);
+                    authorsContainer.appendChild(authorSection);
+                });
+            } else {
+                // Clear the search results and display all authors and quotes
+                authorsContainer.innerHTML = '';
+                sortedAuthors.forEach((author) => {
+                    const authorSection = createAuthorSection(author, quotes);
+                    authorsContainer.appendChild(authorSection);
+                });
+            }
+        });
 }
+
 // processTags runs through each tag to generate a count
 function processTags(quotes) {
     const tagsCount = {};
@@ -143,3 +169,4 @@ function createAuthorSection(author, quotes) {
 
 
 loadAuthorsAndQuotes();
+
