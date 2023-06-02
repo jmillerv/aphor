@@ -9,6 +9,7 @@
     }
 
     .nav-links {
+        width: auto;
         padding: 0.25rem 0;
     }
 }

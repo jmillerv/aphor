@@ -35,4 +35,7 @@ I sought to avoid dealing with node, so the location of where the quotes are sto
 
 ## Credits 
 
+Search functionality provided by the [Fuse.js](https://fusejs.io) library. 
+
 `groovepaper.png` Background made by https://graphicriver.net/user/krispdesigns
+
