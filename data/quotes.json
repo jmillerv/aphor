@@ -329,6 +329,262 @@
         "ring",
         "amazon"
       ]
+    },
+    {
+      "author": "Fred Hampton",
+      "quote": "Nothing's more important than stopping fascism, because fascism will stop us all. ",
+      "citation": "The Murder of Fred Hampton",
+      "link": "https://en.wikipedia.org/wiki/The_Murder_of_Fred_Hampton",
+      "tags": [
+        "fascism"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The way the algorithm works out how to reproduce the results is not dissimilar to the way a straight line is fitted to a set of scattered points on a graph using a mathematical method. If a teacher gave you this task in school, you could probably do it pretty effectively by eye without doing any maths – you’d look at the dots, see roughly in which direction they were scattered, put a ruler on the paper at that angle, maybe shift it around a bit so there’s a similar spread of points on both sides of the ruler, and draw your line. In general, a computer lacks all of the capacities you called on to do this; all it has access to is the coordinates of the points, so it has to use a mathematical methods. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " large languagel models",
+        " artificial intelligence"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The law, like AI, is another technology that is not neutral. Laws against discrimination, for example, fail to address the intergenerational disadvantages of marginalization, highlighting the gulf between the limits of regulation and the absence of reparation. The ‘rights’ that the law instantiates are procedural, like the right to a due process, rather than substantive, such as the right to adequate housing or having enough to eat. So it’s perfectly within the law that millions of children in a rich nation such as the UK live in poverty, that head teachers report, ‘my children have grey skin, poor teeth, poor hair’ (Richardson 2018) and come into school hungry, and teachers have to supplement children’s meagre lunches of bread and margarine while at the same time being pressured by the system to focus on algorithmically driven league tables.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " large languagel models",
+        " artificial intelligence",
+        " law"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The law cannot correct for algorithmic injustice resulting from structural inequality because the law itself sustains those structures.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "law",
+        " algorithms"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The data becomes an asset class with both use value and speculative financial value (van Doorn and Badger, 2020). The feedback loop of machine learning means that each new adaptation by workers to self-optimize under precarious conditions becomes absorbed into the next model, which is then advertised as a rationale for the next round of funding. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "data",
+        " speculation",
+        " finance"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "It should be no surprise, then, if AI carries forward into everyday life what sociologist Randy Martin called the social logic of the derivative (Martin, 2013 cited in Arvidsson, 2016) – a logic of fragmentation, fictionalization and speculation. This is a precaritizing logic that depends on the decomposition of that which was previously whole (the job, the asset, the individual life) so that operations can be moved into a space that’s free of burdensome attaches to the underlying entity, whether that’s the fluctuating price of actual commodities or the frailty of the actual worker.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "data",
+        " speculation",
+        " finance",
+        " financilization"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "While automated sequencing continues to pour genetic data into giant databases at ever-increasing rates, there is little evidence of simple linkages between single genes and conditions or behaviors of interest. But the ‘genomic gaze’ (Comfort, 2018) of vested interests, of funding structures and their political backers, continues to push for genes-first explanations.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "genetics",
+        " genome sequencing"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The early days of the pandemic were a heady time for AI practitioners as it seemed like a moment where new mechanisms of data-driven insight would show their true mettle. “I thought, ‘if there’s any time that AI could prove its usefulness, it’s now. I had my hopes up’”, said one epidemiologist (Heaven, 2021). Overall, the studies showed that none of the many hundreds of tools that had been developed made any real difference, and that some were in fact potentially harmful (Wynants et all, 2020; Driggs et all, 2021).",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " COVID",
+        " large language models",
+        " artifiical intelligence",
+        " necropolitics"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "After all, the most fundamental decision boundary is between those who can live and those who must be allowed to die.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "necropolitics"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The designation of disposability can be applied not only to race but along any decision boundary. Socially applied AI acts necropolitically by accepting structural conditions as a given and projecting the attribute of being suboptimal onto its subjects, as per the previously cited examples of post-austerity welfare. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "necropolitics",
+        " AI",
+        " artificial intelligence"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "While many in the science and statistical communities would like to argue that scientific achievements can be wholly disentangled from the beliefs of their originators, what we are pursuing here is the way that political positions are emerging around AI which can be traced directly back to the supremacist agenda that statistical methods were originally developed to serve. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "statistics",
+        " science",
+        " scientism"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The single most weaponized statistical metric used by eugenicists in modern times has been IQ. Ironically, its originator, French psychologist Alfred Binet, developed the IQ test in order to identify school children who needed additional support, and rejected the idea that it represented a fixed and innate attribute of the individual. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "scientism",
+        " eugenics",
+        " IQ"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "When basic securities such as nutrition and shelter are made precarious and care is deliberately diverted, people easily fall victim to harmful conditions that are otherwise preventable. It’s through this kind of ‘letting die’ that necropolitics enters fully into neural networks.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "necropolitics",
+        " neural networks"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "Fascism is more than an authoritarian way of keeping the system doing during difficult times. It’s a revolutionary ideology that calls for the overthrow of the status quo on both political and cultural fronts. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "fascism"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "Fascism responds to real social contradictions by offering a fake revolution and a catharsis through collective psychosis.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "fascism"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "‘We are not required to believe that fascist movements can only come to power in an exact replay of the scenario of Mussolini and Hitler. AI that is required to fit our model is polarization, deadlock, mass mobilization against internal and external enemies, and complicity by existing elites’ (Paxton, 2005).",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "fascism"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "AI is an apparatus that helps to configure reality through specific arrangements of power. The perspectives that it reinforces are fundamentally unaccountable, and limit our options for being and becoming.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " artificial intelligence"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "…AI is a performance of a particular reality that marks out what must be accepted and what can be changed.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " artificial intelligence"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "When there’s a pandemic, it becomes suddenly possible to house the homeless, it becomes possible to provide forms of universal basic income, it becomes possible to have roads that are not filled with choking traffic and skies that are not filled with airline flights and their carbon emissions. It becomes thinkable to change the terms of our social relations in ways that were formerly dismissed as utopian fantasies, and it reminds us that political agency comes from reinventing the problem in a way that is no longer dependent, as AI is, on the prior reality that is given to us.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " artificial intelligence",
+        " COVID",
+        " necropolitics"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "Mutual aid re-emerges like this over and over again in response to dire need because institutional responses to crises are inadequate at best or harmful at worst, especially for the already marginalized. In mutual aid, knowing and caring are not sharply divided but flow naturally into direct action, into researching and tackling problems rather than appealing to distant authorities or algorithmic abstractions to solve them. Mutual aid transforms thoughtlessness through the practice of collective care and repair.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "mutual aid"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "Commoning is the action of taking aspects of the world back into common ownership and stewardship, and of organizing through structures of mutual aid and solidarity. Commoning is both a refusal of segregation and an assertion of the common good.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "commons"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The organs of an anti-fascist approach to AI, such as workers' and people’s councils, need to position themselves as decolonial through their centering of Blackness in a political sense. This is not about privileging an identitarian or ontological idea of race, like that which AI itself propagates, but about acknowledging that racialized classifications are a ‘prominent form of taxonomizing gestures writ large’ and the need to learn from racialized situatedness that ‘inflects a broader concern about the forces of taxonomy and how to subert them’ (Bey, 2020, p 100).",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " artificial intelligence"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The no-platform tactic of anti-fascism was first practiced in the 1930s, where protestors would rush at the stage to disrupt fascist events and shut down their capacity to recruit and organize. No-platforming the platforms of AI means challenging any and all manifestations of machinery that embed iolent exclusions under the guise of solving social problems.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "AI",
+        " artificial intelligence",
+        " anti-fascism"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "Proponents of socially useful production argued that any computer-controlled machinery should allow reprogramming by the workers, and that there should be democratic control of the design process. ",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "computing"
+      ]
+    },
+    {
+      "author": "Dan McQuillan",
+      "quote": "The exponential scaling of computing power is complicit with the economic ideology of unconstrained growth. Perhaps we already have all the computing that we need, and the future is more about recycling, salvaging, and repurposing.",
+      "citation": "Resisting AI: An Anti-Fascist Approach to AI",
+      "link": "https://bookshop.org/a/92876/9781529213508",
+      "tags": [
+        "computing"
+      ]
     }
   ]
 }
